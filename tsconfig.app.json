@@ -4,11 +4,17 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "types": ["vite/client"],
 
-    /* Linting */
+    // Strictness Linting
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // Module resolution
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@sandbox/*": ["./src/sandbox/*"],
+    },
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
